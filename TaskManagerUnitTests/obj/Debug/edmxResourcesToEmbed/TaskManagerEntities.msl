@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TaskManagerDBModelStoreContainer" CdmEntityContainer="TaskManagerDBEntities">
+    <EntitySetMapping Name="TTasks">
+      <EntityTypeMapping TypeName="TaskManagerDBModel.TTask">
+        <MappingFragment StoreEntitySet="TTasks">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TextOfTask" ColumnName="TextOfTask" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="CreatorID" ColumnName="CreatorID" />
+          <ScalarProperty Name="LastEditorID" ColumnName="LastEditorID" />
+          <ScalarProperty Name="LastEditedDate" ColumnName="LastEditedDate" />
+          <ScalarProperty Name="Users" ColumnName="Users" />
+          <ScalarProperty Name="NameOfTask" ColumnName="NameOfTask" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="TaskManagerDBModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Tasks" ColumnName="Tasks" />
+          <ScalarProperty Name="TasksSharedBy" ColumnName="TasksSharedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

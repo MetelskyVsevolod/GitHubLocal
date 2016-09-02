@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TaskManagerDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TTasks">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="TextOfTask" Type="ntext" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="CreatorID" Type="int" />
+    <Property Name="LastEditorID" Type="int" />
+    <Property Name="LastEditedDate" Type="datetime" />
+    <Property Name="Users" Type="text" />
+    <Property Name="NameOfTask" Type="text" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Username" Type="ntext" />
+    <Property Name="Email" Type="ntext" />
+    <Property Name="Password" Type="text" />
+    <Property Name="Tasks" Type="text" />
+    <Property Name="TasksSharedBy" Type="text" />
+  </EntityType>
+  <EntityContainer Name="TaskManagerDBModelStoreContainer">
+    <EntitySet Name="TTasks" EntityType="Self.TTasks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
